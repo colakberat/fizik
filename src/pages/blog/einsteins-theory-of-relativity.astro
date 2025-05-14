@@ -1,0 +1,394 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+---
+
+<Layout 
+  title="Einstein's Theory of Relativity: A Revolution in Physics" 
+  description="Explore how Albert Einstein's theory of relativity fundamentally changed our understanding of space, time, and gravity, and how this revolutionary concept continues to influence modern physics today."
+  image="https://images.pexels.com/photos/2098428/pexels-photo-2098428.jpeg"
+>
+  <article class="py-10">
+    <!-- Hero Section -->
+    <div class="relative h-96 mb-12">
+      <div class="absolute inset-0">
+        <img 
+          src="https://images.pexels.com/photos/2098428/pexels-photo-2098428.jpeg" 
+          alt="Einstein's Theory of Relativity" 
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+      </div>
+      <div class="container-wide h-full flex items-end relative z-10 pb-10">
+        <div class="max-w-3xl">
+          <div class="flex items-center space-x-2 mb-4">
+            <span class="px-3 py-1 text-xs font-medium bg-primary-100 text-primary-800 rounded-full">Relativity</span>
+            <time class="text-sm text-gray-300">March 15, 2025</time>
+            <span class="text-sm text-gray-300">•</span>
+            <span class="text-sm text-gray-300">15 min read</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Einstein's Theory of Relativity: A Revolution in Physics</h1>
+          <div class="flex items-center mt-6">
+            <img 
+              src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" 
+              alt="Dr. Sarah Mitchell" 
+              class="w-12 h-12 rounded-full mr-4 object-cover"
+            />
+            <div>
+              <p class="text-sm font-medium text-white">Dr. Sarah Mitchell</p>
+              <p class="text-sm text-gray-300">Theoretical Physicist & Writer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Content -->
+    <div class="container-narrow">
+      <div class="prose dark:prose-invert lg:prose-lg mx-auto">
+        <p class="lead text-xl">
+          In 1905, a 26-year-old patent clerk named Albert Einstein published a paper that would forever change our understanding of the universe. His theory of relativity challenged centuries of established physics and introduced a new way of thinking about space, time, and gravity.
+        </p>
+        
+        <h2>The Special Theory of Relativity</h2>
+        <p>
+          Einstein's first breakthrough came with his Special Theory of Relativity, published in his paper "On the Electrodynamics of Moving Bodies." This theory was built on two fundamental principles:
+        </p>
+        
+        <ol>
+          <li>
+            <strong>The Principle of Relativity:</strong> The laws of physics are the same in all inertial reference frames (frames moving at constant velocity relative to each other).
+          </li>
+          <li>
+            <strong>The Constancy of the Speed of Light:</strong> Light always travels at the same speed (approximately 299,792,458 meters per second in a vacuum), regardless of the motion of the light source or the observer.
+          </li>
+        </ol>
+        
+        <p>
+          These seemingly simple principles led to profound consequences, including:
+        </p>
+        
+        <ul>
+          <li>Time dilation: Moving clocks run slower relative to stationary ones</li>
+          <li>Length contraction: Objects in motion appear shorter along their direction of travel</li>
+          <li>Relativistic mass: An object's mass increases as its velocity approaches the speed of light</li>
+          <li>The equivalence of mass and energy, expressed in the famous equation E=mc²</li>
+        </ul>
+        
+        <div class="bg-primary-50 dark:bg-primary-900/30 p-6 rounded-lg border-l-4 border-primary-500 my-8">
+          <blockquote class="text-lg italic font-medium text-gray-700 dark:text-gray-300">
+            "When you sit with a nice girl for two hours, it seems like two minutes; when you sit on a hot stove for two minutes, it seems like two hours. That's relativity."
+            <footer class="text-sm text-gray-600 dark:text-gray-400 mt-2">— Albert Einstein</footer>
+          </blockquote>
+        </div>
+        
+        <h2>The General Theory of Relativity</h2>
+        <p>
+          Ten years later, in 1915, Einstein published his General Theory of Relativity, which expanded on Special Relativity to include gravity. This theory presented a revolutionary concept: gravity is not a force, as Newton had described it, but rather a curvature of spacetime caused by mass and energy.
+        </p>
+        
+        <p>
+          Key insights from General Relativity include:
+        </p>
+        
+        <ul>
+          <li>Spacetime is a four-dimensional fabric that can be warped by massive objects</li>
+          <li>Objects move along geodesics (the shortest paths) in curved spacetime</li>
+          <li>Light rays follow curved paths when passing near massive objects</li>
+          <li>Time passes slower in stronger gravitational fields</li>
+        </ul>
+        
+        <figure class="my-8">
+          <img 
+            src="https://images.pexels.com/photos/5210252/pexels-photo-5210252.jpeg" 
+            alt="Spacetime curvature illustration" 
+            class="rounded-lg w-full"
+          />
+          <figcaption class="text-center text-sm text-gray-500 dark:text-gray-400 mt-2">
+            Illustration of spacetime curvature caused by a massive object
+          </figcaption>
+        </figure>
+        
+        <h2>Experimental Confirmation</h2>
+        <p>
+          One of the remarkable aspects of Einstein's theories was that they made precise, testable predictions. Several key observations have confirmed the validity of relativity:
+        </p>
+        
+        <h3>The Bending of Light</h3>
+        <p>
+          During a solar eclipse in 1919, astronomer Arthur Eddington observed that starlight was indeed bent as it passed near the sun, exactly as Einstein had predicted. This dramatic confirmation made Einstein internationally famous overnight.
+        </p>
+        
+        <h3>Gravitational Redshift</h3>
+        <p>
+          Light emitted from a source in a strong gravitational field is shifted toward the red end of the spectrum when observed from a region of weaker gravity. This effect has been measured with high precision using atomic clocks at different altitudes.
+        </p>
+        
+        <h3>Gravitational Waves</h3>
+        <p>
+          In 2015, the Laser Interferometer Gravitational-Wave Observatory (LIGO) detected gravitational waves—ripples in spacetime—produced by the collision of two black holes. This observation, coming exactly 100 years after Einstein's publication of General Relativity, provided stunning confirmation of the theory.
+        </p>
+        
+        <h2>Practical Applications</h2>
+        <p>
+          Far from being merely theoretical, Einstein's relativity has numerous practical applications:
+        </p>
+        
+        <ul>
+          <li>
+            <strong>Global Positioning System (GPS):</strong> GPS satellites must account for both special and general relativistic effects to provide accurate positioning. Without these corrections, GPS would accumulate errors of about 10 kilometers per day!
+          </li>
+          <li>
+            <strong>Particle Accelerators:</strong> The design of particle accelerators must account for relativistic effects as particles approach the speed of light.
+          </li>
+          <li>
+            <strong>Nuclear Energy:</strong> The famous equation E=mc² is the foundation for understanding nuclear reactions and the enormous energy released when mass is converted to energy.
+          </li>
+        </ul>
+        
+        <h2>The Legacy of Relativity</h2>
+        <p>
+          Einstein's theories of relativity not only revolutionized physics but also had profound impacts on philosophy, literature, and popular culture. The concept that time and space are relative rather than absolute has influenced thinking far beyond scientific circles.
+        </p>
+        
+        <p>
+          Today, relativity remains a cornerstone of modern physics, serving as a foundation for understanding the universe on its largest scales. It works alongside quantum mechanics (which describes the universe at the smallest scales) as one of the two pillars of modern physics.
+        </p>
+        
+        <p>
+          The search for a unified theory that can reconcile these two frameworks—a "theory of everything"—continues to be one of the great quests of theoretical physics, carrying forward Einstein's legacy of bold, imaginative exploration of the fundamental nature of reality.
+        </p>
+        
+        <div class="bg-secondary-50 dark:bg-secondary-900/30 p-6 rounded-lg my-8">
+          <h3 class="text-xl font-bold mb-2">Key Concepts in Relativity</h3>
+          <ul class="space-y-2">
+            <li><strong>Spacetime:</strong> The four-dimensional continuum of space and time</li>
+            <li><strong>Invariance:</strong> Physical laws remain the same across all reference frames</li>
+            <li><strong>Mass-Energy Equivalence:</strong> Mass can be converted to energy and vice versa (E=mc²)</li>
+            <li><strong>Spacetime Curvature:</strong> Massive objects cause spacetime to curve, which we experience as gravity</li>
+            <li><strong>Light Cone:</strong> The path that light would take through spacetime, defining causally related events</li>
+          </ul>
+        </div>
+        
+        <h2>Conclusion</h2>
+        <p>
+          Einstein's theories of relativity stand as one of the greatest intellectual achievements in human history, fundamentally altering our understanding of space, time, and gravity. From the bending of starlight to the precision of GPS, from black holes to gravitational waves, the predictions of relativity continue to be confirmed with remarkable accuracy.
+        </p>
+        
+        <p>
+          As we venture further into space and probe deeper into the fundamental nature of reality, Einstein's revolutionary insights continue to guide our understanding of the cosmos. His work reminds us of the power of human creativity and the profound beauty of the universe revealed through the lens of physics.
+        </p>
+      </div>
+      
+      <!-- Author Bio -->
+      <div class="my-12 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <div class="flex items-start">
+          <img 
+            src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" 
+            alt="Dr. Sarah Mitchell" 
+            class="w-16 h-16 rounded-full mr-6 object-cover"
+          />
+          <div>
+            <h3 class="text-xl font-bold mb-2">About the Author</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Dr. Sarah Mitchell holds a Ph.D. in Theoretical Physics from MIT and has spent the last decade making complex scientific concepts accessible to the public. She's the author of "Quantum Realities" and a frequent contributor to scientific publications.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-primary-700 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-200">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                </svg>
+              </a>
+              <a href="#" class="text-primary-700 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-200">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+              <a href="#" class="text-primary-700 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-200">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Comments Section -->
+      <div class="my-12">
+        <h2 class="text-2xl font-bold mb-6">Discussion (3)</h2>
+        
+        <div class="space-y-6">
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+            <div class="flex items-start space-x-4">
+              <img 
+                src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg" 
+                alt="User Avatar" 
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold">Michael Thompson</h4>
+                  <span class="text-sm text-gray-500 dark:text-gray-400">2 days ago</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                  Fantastic explanation of relativity! I've always found it challenging to grasp the concept of spacetime curvature, but your article made it much clearer. The practical applications section was especially interesting.
+                </p>
+                <div class="mt-2 flex items-center space-x-4">
+                  <button class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 flex items-center">
+                    <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                    </svg>
+                    Like (5)
+                  </button>
+                  <button class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">Reply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+            <div class="flex items-start space-x-4">
+              <img 
+                src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" 
+                alt="User Avatar" 
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold">Emily Rodriguez</h4>
+                  <span class="text-sm text-gray-500 dark:text-gray-400">3 days ago</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                  I'm studying physics in college, and your explanation of the experimental confirmations of relativity is one of the clearest I've read. Do you have any recommendations for books that dive deeper into the mathematics of general relativity?
+                </p>
+                <div class="mt-2 flex items-center space-x-4">
+                  <button class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 flex items-center">
+                    <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                    </svg>
+                    Like (3)
+                  </button>
+                  <button class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">Reply</button>
+                </div>
+                
+                <!-- Reply -->
+                <div class="mt-4 ml-12 p-4 bg-gray-50 dark:bg-gray-700/50 rounded">
+                  <div class="flex items-start space-x-4">
+                    <img 
+                      src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" 
+                      alt="Author Avatar" 
+                      class="w-10 h-10 rounded-full"
+                    />
+                    <div>
+                      <div class="flex items-center">
+                        <h4 class="font-bold text-sm">Dr. Sarah Mitchell</h4>
+                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">2 days ago</span>
+                      </div>
+                      <p class="text-gray-600 dark:text-gray-300 mt-1 text-sm">
+                        Thanks for your question, Emily! For a deeper mathematical treatment, I'd recommend "Gravitation" by Misner, Thorne, and Wheeler (though it's quite advanced), or for a more accessible approach, "A First Course in General Relativity" by Bernard Schutz. Good luck with your studies!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+            <div class="flex items-start space-x-4">
+              <img 
+                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
+                alt="User Avatar" 
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold">Robert Chen</h4>
+                  <span class="text-sm text-gray-500 dark:text-gray-400">5 days ago</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                  I've always wondered: how does the theory of relativity relate to quantum mechanics? Are there areas where these two pillars of modern physics conflict with each other?
+                </p>
+                <div class="mt-2 flex items-center space-x-4">
+                  <button class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 flex items-center">
+                    <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                    </svg>
+                    Like (8)
+                  </button>
+                  <button class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300">Reply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Comment Form -->
+        <div class="mt-8">
+          <h3 class="text-xl font-bold mb-4">Leave a Comment</h3>
+          <form>
+            <div class="mb-4">
+              <textarea
+                rows="4"
+                placeholder="Share your thoughts..."
+                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+              ></textarea>
+            </div>
+            <div class="flex items-center space-x-4">
+              <button 
+                type="submit" 
+                class="px-6 py-2 bg-primary-700 hover:bg-primary-800 text-white font-medium rounded-md transition-colors"
+              >
+                Post Comment
+              </button>
+              <label class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                <input type="checkbox" class="mr-2">
+                Notify me of follow-up comments
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Related Articles -->
+    <section class="py-12 bg-gray-50 dark:bg-gray-800/50 mt-12">
+      <div class="container-wide">
+        <h2 class="text-2xl font-bold mb-8">Related Articles</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ArticleCard
+            title="Quantum Entanglement: Spooky Action at a Distance"
+            description="Unravel the mysteries of quantum entanglement, a phenomenon that Einstein famously called 'spooky action at a distance,' and learn how it challenges our understanding of reality."
+            image="https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg"
+            slug="quantum-entanglement"
+            date="February 28, 2025"
+            readTime="12 min read"
+            category="Quantum Physics"
+          />
+          
+          <ArticleCard
+            title="Hawking Radiation: Black Holes Aren't So Black"
+            description="Learn about Stephen Hawking's groundbreaking discovery that black holes emit radiation, challenging the classical understanding of these cosmic phenomena."
+            image="https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg"
+            slug="hawking-radiation"
+            date="February 20, 2025"
+            readTime="9 min read"
+            category="Astrophysics"
+          />
+          
+          <ArticleCard
+            title="The Uncertainty Principle: Heisenberg's Revolutionary Insight"
+            description="Delve into Werner Heisenberg's uncertainty principle, which established fundamental limits to the precision with which certain pairs of physical properties can be known."
+            image="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg"
+            slug="heisenbergs-uncertainty-principle"
+            date="February 1, 2025"
+            readTime="13 min read"
+            category="Quantum Physics"
+          />
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>

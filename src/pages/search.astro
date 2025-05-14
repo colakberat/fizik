@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+---
+
+<Layout title="Search - Quantum Insights">
+  <section class="py-16">
+    <div class="container-narrow">
+      <h1 class="text-3xl font-bold mb-6 text-center">Search Articles</h1>
+      
+      <form class="max-w-2xl mx-auto mb-12">
+        <div class="relative">
+          <input 
+            type="text" 
+            placeholder="Search for articles, scientists, or topics..." 
+            class="w-full px-5 py-4 pr-12 border border-gray-300 dark:border-gray-700 rounded-lg shadow-sm focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+            autofocus
+          />
+          <button 
+            type="submit"
+            class="absolute right-3 top-1/2 transform -translate-y-1/2"
+          >
+            <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="text-sm text-gray-600 dark:text-gray-400 mr-2 pt-1">Popular searches:</span>
+          <a href="?q=relativity" class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">relativity</a>
+          <a href="?q=quantum physics" class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">quantum physics</a>
+          <a href="?q=einstein" class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">einstein</a>
+          <a href="?q=newton" class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">newton</a>
+          <a href="?q=curie" class="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">curie</a>
+        </div>
+      </form>
+      
+      <div class="pt-8 border-t border-gray-200 dark:border-gray-700">
+        <h2 class="text-xl font-bold mb-6">Search Results</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ArticleCard
+            title="Einstein's Theory of Relativity: A Revolution in Physics"
+            description="Explore how Albert Einstein's theory of relativity fundamentally changed our understanding of space, time, and gravity, and how this revolutionary concept continues to influence modern physics today."
+            image="https://images.pexels.com/photos/2098428/pexels-photo-2098428.jpeg"
+            slug="einsteins-theory-of-relativity"
+            date="March 15, 2025"
+            readTime="15 min read"
+            category="Relativity"
+          />
+          
+          <ArticleCard
+            title="Quantum Entanglement: Spooky Action at a Distance"
+            description="Unravel the mysteries of quantum entanglement, a phenomenon that Einstein famously called 'spooky action at a distance,' and learn how it challenges our understanding of reality."
+            image="https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg"
+            slug="quantum-entanglement"
+            date="February 28, 2025"
+            readTime="12 min read"
+            category="Quantum Physics"
+          />
+          
+          <ArticleCard
+            title="The Photoelectric Effect: Einstein's Nobel Prize-Winning Work"
+            description="Discover how Einstein's explanation of the photoelectric effect, for which he won the Nobel Prize, helped establish the quantum theory and revolutionized our understanding of light."
+            image="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg"
+            slug="photoelectric-effect"
+            date="January 10, 2025"
+            readTime="10 min read"
+            category="Quantum Physics"
+          />
+        </div>
+        
+        <div class="mt-12 flex justify-center">
+          <nav class="inline-flex rounded-md shadow">
+            <a href="#" class="py-2 px-4 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-l-md hover:bg-gray-100 dark:hover:bg-gray-700">Previous</a>
+            <a href="#" class="py-2 px-4 border-t border-b border-gray-300 dark:border-gray-700 bg-primary-700 text-white">1</a>
+            <a href="#" class="py-2 px-4 border-t border-b border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">2</a>
+            <a href="#" class="py-2 px-4 border-t border-b border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">3</a>
+            <a href="#" class="py-2 px-4 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-r-md hover:bg-gray-100 dark:hover:bg-gray-700">Next</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,163 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ScientistCard from '../../components/ScientistCard.astro';
+---
+
+<Layout title="Ünlü Fizikçiler ve Bilim İnsanları - Katkılarını Öğrenin" description="Fiziğin en büyük keşiflerinin ve teorilerinin arkasındaki parlak zihinlerle tanışın. Einstein, Newton, Curie ve daha fazla ünlü bilim insanının evren anlayışımızı nasıl şekillendirdiğini öğrenin.">
+  <section class="py-16 md:py-24 bg-gray-50 dark:bg-gray-800/50 relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden opacity-10">
+      <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg')] bg-no-repeat bg-cover bg-center blur-sm scale-110"></div>
+    </div>
+    <div class="container-wide relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Parlak Zihinlerle Tanışın</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">
+          Çığır açan keşifleri ve teorileriyle fiziği devrimleştiren olağanüstü bilim insanlarını keşfedin.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-12">
+    <div class="container-wide">
+      <div class="flex flex-wrap items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold">Tüm Bilim İnsanları</h2>
+        
+        <div class="relative mt-4 sm:mt-0">
+          <select class="appearance-none bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary-500">
+            <option>Tüm Alanlar</option>
+            <option>Kuantum Fiziği</option>
+            <option>Klasik Mekanik</option>
+            <option>Görelilik</option>
+            <option>Nükleer Fizik</option>
+            <option>Astrofizik</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 dark:text-gray-300">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <ScientistCard
+          name="Albert Einstein"
+          image="https://images.pexels.com/photos/2773939/pexels-photo-2773939.jpeg"
+          years="1879-1955"
+          field="Teorik Fizik"
+          slug="albert-einstein"
+          contribution="Modern fiziğin iki temel direğinden biri olan görelilik teorisini geliştirdi."
+        />
+        
+        <ScientistCard
+          name="Marie Curie"
+          image="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
+          years="1867-1934"
+          field="Radyoaktivite"
+          slug="marie-curie"
+          contribution="Radyoaktivite alanının öncüsü, iki farklı bilim dalında Nobel Ödülü kazanan ilk kişi."
+        />
+        
+        <ScientistCard
+          name="Isaac Newton"
+          image="https://images.pexels.com/photos/60582/newton-s-cradle-balls-sphere-60582.jpeg"
+          years="1643-1727"
+          field="Klasik Mekanik"
+          slug="isaac-newton"
+          contribution="Klasik mekaniğin temellerini atan hareket ve evrensel çekim yasalarını formüle etti."
+        />
+        
+        <ScientistCard
+          name="Richard Feynman"
+          image="https://images.pexels.com/photos/714699/pexels-photo-714699.jpeg"
+          years="1918-1988"
+          field="Kuantum Fiziği"
+          slug="richard-feynman"
+          contribution="Kuantum elektrodinamiğin öncüsü ve parçacık etkileşimlerini görselleştirmek için Feynman diyagramlarını geliştirdi."
+        />
+        
+        <ScientistCard
+          name="Niels Bohr"
+          image="https://images.pexels.com/photos/256302/pexels-photo-256302.jpeg"
+          years="1885-1962"
+          field="Kuantum Fiziği"
+          slug="niels-bohr"
+          contribution="Atom modelini geliştirdi ve atomik yapının anlaşılmasına temel katkılarda bulundu."
+        />
+        
+        <ScientistCard
+          name="Stephen Hawking"
+          image="https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg"
+          years="1942-2018"
+          field="Kozmoloji"
+          slug="stephen-hawking"
+          contribution="Kara deliklerin doğası hakkında önemli içgörüler sağladı ve Hawking radyasyonunu öngördü."
+        />
+        
+        <ScientistCard
+          name="Max Planck"
+          image="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg"
+          years="1858-1947"
+          field="Kuantum Fiziği"
+          slug="max-planck"
+          contribution="Kuantum teorisini ortaya attı ve 1918'de Nobel Fizik Ödülü'nü kazandı."
+        />
+        
+        <ScientistCard
+          name="Erwin Schrödinger"
+          image="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg"
+          years="1887-1961"
+          field="Kuantum Fiziği"
+          slug="erwin-schrodinger"
+          contribution="Kuantum sistemlerinin zaman içindeki değişimini tanımlayan Schrödinger denklemini geliştirdi."
+        />
+        
+        <ScientistCard
+          name="Michael Faraday"
+          image="https://images.pexels.com/photos/414579/pexels-photo-414579.jpeg"
+          years="1791-1867"
+          field="Elektromanyetizma"
+          slug="michael-faraday"
+          contribution="Elektromanyetik indüksiyonu keşfetti ve elektrik motoru teknolojisinin temellerini attı."
+        />
+        
+        <ScientistCard
+          name="Werner Heisenberg"
+          image="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg"
+          years="1901-1976"
+          field="Kuantum Fiziği"
+          slug="werner-heisenberg"
+          contribution="Belirsizlik ilkesini formüle etti ve kuantum mekaniğinin temellerini attı."
+        />
+        
+        <ScientistCard
+          name="James Clerk Maxwell"
+          image="https://images.pexels.com/photos/754937/pexels-photo-754937.jpeg"
+          years="1831-1879"
+          field="Elektromanyetizma"
+          slug="james-clerk-maxwell"
+          contribution="Elektromanyetik teorinin klasik teorisini geliştirdi ve ışığın elektromanyetik bir dalga olduğunu gösterdi."
+        />
+        
+        <ScientistCard
+          name="Galileo Galilei"
+          image="https://images.pexels.com/photos/680045/pexels-photo-680045.jpeg"
+          years="1564-1642"
+          field="Astronomi"
+          slug="galileo-galilei"
+          contribution="Modern fiziğin ve astronominin temellerini attı, Kopernik teorisini doğrulayan gözlemler yaptı."
+        />
+      </div>
+      
+      <div class="mt-12 flex justify-center">
+        <nav class="inline-flex rounded-md shadow">
+          <a href="#" class="py-2 px-4 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-l-md hover:bg-gray-100 dark:hover:bg-gray-700">Önceki</a>
+          <a href="#" class="py-2 px-4 border-t border-b border-gray-300 dark:border-gray-700 bg-primary-700 text-white">1</a>
+          <a href="#" class="py-2 px-4 border-t border-b border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">2</a>
+          <a href="#" class="py-2 px-4 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-r-md hover:bg-gray-100 dark:hover:bg-gray-700">Sonraki</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,281 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Fizik Bilgi Yarışması - Kuantum İçgörüler" description="Ünlü fizikçiler ve buluşları hakkında bilginizi test edin. Eğlenceli ve öğretici bir fizik bilgi yarışmasına katılın.">
+  <div class="min-h-screen py-12 px-4 sm:px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4">Fizik Bilgi Yarışması</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">
+          Fizik dünyasının en büyük isimleri hakkında bilginizi test edin
+        </p>
+      </div>
+
+      <div id="quiz-container" class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+        <div id="start-screen" class="text-center">
+          <p class="text-lg mb-6">
+            Bu yarışmada fizik tarihinin önemli isimleri ve buluşları hakkında 10 soru bulunmaktadır.
+          </p>
+          <button 
+            id="start-button"
+            class="btn btn-primary"
+          >
+            Yarışmaya Başla
+          </button>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+          <div class="flex justify-between items-center mb-6">
+            <div class="text-lg font-semibold">Soru <span id="question-number">1</span>/10</div>
+            <div class="text-lg font-semibold">Puan: <span id="score">0</span></div>
+          </div>
+
+          <div class="mb-8">
+            <p id="question-text" class="text-xl mb-6"></p>
+            <div id="options" class="space-y-4"></div>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <button 
+              id="previous-button" 
+              class="btn btn-secondary hidden"
+            >
+              Önceki Soru
+            </button>
+            <button 
+              id="next-button" 
+              class="btn btn-primary hidden"
+            >
+              Sonraki Soru
+            </button>
+          </div>
+        </div>
+
+        <div id="result-screen" class="hidden text-center">
+          <h2 class="text-2xl font-bold mb-4">Yarışma Tamamlandı!</h2>
+          <p class="text-xl mb-4">Toplam Puanınız: <span id="final-score">0</span>/100</p>
+          <div id="result-message" class="text-lg mb-6"></div>
+          <button 
+            id="restart-button"
+            class="btn btn-primary"
+          >
+            Tekrar Dene
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+const questions = [
+  {
+    question: "Einstein'ın ünlü E=mc² formülünde 'c' neyi temsil eder?",
+    options: [
+      "Işık hızı",
+      "Kütle",
+      "Enerji",
+      "Zaman"
+    ],
+    correct: 0
+  },
+  {
+    question: "Marie Curie hangi element(ler)i keşfetmiştir?",
+    options: [
+      "Sadece Radyum",
+      "Sadece Polonyum",
+      "Radyum ve Polonyum",
+      "Uranyum ve Toryum"
+    ],
+    correct: 2
+  },
+  {
+    question: "Newton'un kaç hareket yasası vardır?",
+    options: [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    correct: 1
+  },
+  {
+    question: "Kuantum mekaniğinin temel prensiplerinden olan 'Belirsizlik İlkesi'ni kim ortaya koymuştur?",
+    options: [
+      "Niels Bohr",
+      "Werner Heisenberg",
+      "Erwin Schrödinger",
+      "Max Planck"
+    ],
+    correct: 1
+  },
+  {
+    question: "Hangi bilim insanı kara deliklerin ışıma yaptığını teorik olarak kanıtlamıştır?",
+    options: [
+      "Stephen Hawking",
+      "Roger Penrose",
+      "Carl Sagan",
+      "John Wheeler"
+    ],
+    correct: 0
+  },
+  {
+    question: "Elektromanyetik indüksiyon yasasını kim keşfetmiştir?",
+    options: [
+      "James Clerk Maxwell",
+      "Michael Faraday",
+      "Heinrich Hertz",
+      "Nikola Tesla"
+    ],
+    correct: 1
+  },
+  {
+    question: "Atom altı parçacıklardan hangisi ilk keşfedilmiştir?",
+    options: [
+      "Proton",
+      "Nötron",
+      "Elektron",
+      "Kuark"
+    ],
+    correct: 2
+  },
+  {
+    question: "Fotoelektrik etki ile ilgili çalışmalarından dolayı Nobel Fizik Ödülü'nü kim almıştır?",
+    options: [
+      "Max Planck",
+      "Niels Bohr",
+      "Albert Einstein",
+      "Werner Heisenberg"
+    ],
+    correct: 2
+  },
+  {
+    question: "Hangi fizikçi atom çekirdeğinin varlığını keşfetmiştir?",
+    options: [
+      "Ernest Rutherford",
+      "J.J. Thomson",
+      "Niels Bohr",
+      "Marie Curie"
+    ],
+    correct: 0
+  },
+  {
+    question: "Özel görelilik teorisine göre, bir cismin kütlesi hızı arttıkça nasıl değişir?",
+    options: [
+      "Azalır",
+      "Artar",
+      "Değişmez",
+      "Sıfırlanır"
+    ],
+    correct: 1
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let answers = new Array(questions.length).fill(null);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const startScreen = document.getElementById('start-screen');
+  const quizScreen = document.getElementById('quiz-screen');
+  const resultScreen = document.getElementById('result-screen');
+  const startButton = document.getElementById('start-button');
+  const previousButton = document.getElementById('previous-button');
+  const nextButton = document.getElementById('next-button');
+  const restartButton = document.getElementById('restart-button');
+
+  startButton.addEventListener('click', startQuiz);
+  previousButton.addEventListener('click', showPreviousQuestion);
+  nextButton.addEventListener('click', showNextQuestion);
+  restartButton.addEventListener('click', restartQuiz);
+
+  function startQuiz() {
+    startScreen.classList.add('hidden');
+    quizScreen.classList.remove('hidden');
+    showQuestion(0);
+  }
+
+  function showQuestion(index) {
+    const questionText = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options');
+    const questionNumber = document.getElementById('question-number');
+
+    questionText.textContent = questions[index].question;
+    questionNumber.textContent = index + 1;
+    optionsContainer.innerHTML = '';
+
+    questions[index].options.forEach((option, optionIndex) => {
+      const button = document.createElement('button');
+      button.className = `w-full text-left p-4 rounded-lg border ${
+        answers[index] === optionIndex
+          ? 'bg-primary-100 dark:bg-primary-900 border-primary-500'
+          : 'border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700'
+      }`;
+      button.textContent = option;
+      
+      button.addEventListener('click', () => selectAnswer(optionIndex));
+      optionsContainer.appendChild(button);
+    });
+
+    updateNavigationButtons();
+  }
+
+  function selectAnswer(optionIndex) {
+    answers[currentQuestion] = optionIndex;
+    showQuestion(currentQuestion);
+  }
+
+  function showPreviousQuestion() {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      showQuestion(currentQuestion);
+    }
+  }
+
+  function showNextQuestion() {
+    if (currentQuestion < questions.length - 1) {
+      currentQuestion++;
+      showQuestion(currentQuestion);
+    } else {
+      showResults();
+    }
+  }
+
+  function updateNavigationButtons() {
+    previousButton.classList.toggle('hidden', currentQuestion === 0);
+    nextButton.classList.remove('hidden');
+    nextButton.textContent = currentQuestion === questions.length - 1 ? 'Sonuçları Gör' : 'Sonraki Soru';
+  }
+
+  function showResults() {
+    score = answers.reduce((total, answer, index) => {
+      return total + (answer === questions[index].correct ? 10 : 0);
+    }, 0);
+
+    quizScreen.classList.add('hidden');
+    resultScreen.classList.remove('hidden');
+
+    document.getElementById('final-score').textContent = score;
+    
+    const resultMessage = document.getElementById('result-message');
+    if (score >= 90) {
+      resultMessage.textContent = 'Muhteşem! Bir fizik dehası gibisin!';
+    } else if (score >= 70) {
+      resultMessage.textContent = 'Çok iyi! Fizik bilgin oldukça etkileyici.';
+    } else if (score >= 50) {
+      resultMessage.textContent = 'İyi iş! Temel fizik bilgine hakimsin.';
+    } else {
+      resultMessage.textContent = 'Daha fazla çalışman gerekiyor. Tekrar denemeye ne dersin?';
+    }
+  }
+
+  function restartQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    answers.fill(null);
+    resultScreen.classList.add('hidden');
+    startScreen.classList.remove('hidden');
+  }
+});
+</script>

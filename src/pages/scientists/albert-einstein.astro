@@ -1,0 +1,224 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+---
+
+<Layout 
+  title="Albert Einstein - Hayatı, Katkıları ve Mirası" 
+  description="Albert Einstein'ın hayatını ve devrim niteliğindeki çalışmalarını keşfedin. Görelilik teorileriyle uzay, zaman ve yerçekimi anlayışımızı temelden değiştiren dahi fizikçinin hikayesi."
+  image="https://images.pexels.com/photos/2773939/pexels-photo-2773939.jpeg"
+>
+  <article class="py-10">
+    <!-- Hero Section -->
+    <div class="relative h-96 mb-12">
+      <div class="absolute inset-0">
+        <img 
+          src="https://images.pexels.com/photos/2773939/pexels-photo-2773939.jpeg" 
+          alt="Albert Einstein" 
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+      </div>
+      <div class="container-wide h-full flex items-end relative z-10 pb-10">
+        <div class="max-w-3xl">
+          <span class="px-3 py-1 text-xs font-medium bg-secondary-100 text-secondary-800 rounded-full mb-4 inline-block">Teorik Fizik</span>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Albert Einstein</h1>
+          <p class="text-xl text-gray-300">1879 - 1955</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Content -->
+    <div class="container-narrow">
+      <div class="prose dark:prose-invert lg:prose-lg mx-auto">
+        <p class="lead text-xl">
+          Albert Einstein, tüm zamanların en büyük fizikçilerinden biri olarak kabul edilen, görelilik teorileri ve kuantum teorisine katkılarıyla evren anlayışımızı devrimleştiren bir bilim insanıdır. Çalışmaları, bilim insanlarının uzay, zaman, madde, enerji ve yerçekimi hakkındaki görüşlerini temelden değiştirmiştir.
+        </p>
+        
+        <div class="bg-primary-50 dark:bg-primary-900/30 p-6 rounded-lg border-l-4 border-primary-500 my-8">
+          <blockquote class="text-lg italic font-medium text-gray-700 dark:text-gray-300">
+            "Hayal gücü bilgiden daha önemlidir. Bilgi sınırlıdır. Hayal gücü dünyayı kuşatır."
+            <footer class="text-sm text-gray-600 dark:text-gray-400 mt-2">— Albert Einstein</footer>
+          </blockquote>
+        </div>
+        
+        <h2>Erken Yaşam ve Eğitim</h2>
+        <p>
+          14 Mart 1879'da Almanya'nın Ulm şehrinde doğan Einstein, küçük yaşlardan itibaren doğaya karşı derin bir merak ve matematik ile fiziğe karşı yetenek gösterdi. Yaygın inanışın aksine, Einstein kötü bir öğrenci değildi, ancak dönemin Alman okullarındaki otoriter öğretim tarzına karşı çıkıyordu.
+        </p>
+        
+        <p>
+          Ailesi İtalya'ya taşındıktan sonra, Einstein eğitimine İsviçre'de devam etti ve 1896'da İsviçre Federal Politeknik Okulu'na (ETH Zürich) girdi. Zekasına rağmen, mezun olduktan sonra akademik bir pozisyon bulmakta zorlandı ve sonunda Bern'deki İsviçre Patent Ofisi'nde bir iş buldu.
+        </p>
+        
+        <h2>Mucize Yıl: 1905</h2>
+        <p>
+          Patent ofisinde çalışırken, Einstein 1905 yılında Annalen der Physik bilimsel dergisinde dört çığır açıcı makale yayınladı. Bu yıl daha sonra "Annus Mirabilis" (Mucize Yıl) olarak anılacaktı. Bu makaleler fizik dünyasını değiştirecekti:
+        </p>
+        
+        <ol>
+          <li>
+            <strong>Fotoelektrik Etki:</strong> Einstein ışığın ayrık enerji paketlerinden (fotonlar) oluştuğunu öne sürdü ve kuantum teorisinin temellerini attı. Bu çalışma ona 1921'de Nobel Fizik Ödülü'nü kazandıracaktı.
+          </li>
+          <li>
+            <strong>Brownian Hareketi:</strong> Atom ve moleküllerin varlığına dair deneysel kanıt sağlayarak uzun süredir devam eden bir bilimsel tartışmayı sonlandırdı.
+          </li>
+          <li>
+            <strong>Özel Görelilik:</strong> Fizik yasalarının tüm eylemsiz gözlemciler için aynı olduğunu ve uzay ile zamanın uzay-zaman adı verilen tek bir süreklilik oluşturduğunu ortaya koydu.
+          </li>
+          <li>
+            <strong>Kütle-Enerji Eşdeğerliği:</strong> Takip eden bir makalede, ünlü E=mc² denklemini türetti ve enerjinin kütleye dönüşebileceğini gösterdi.
+          </li>
+        </ol>
+        
+        <h2>Genel Görelilik</h2>
+        <p>
+          1915'te Einstein, özel göreliliği yerçekimini de kapsayacak şekilde genişleten genel görelilik teorisini yayınladı. Yerçekimini bir kuvvet olarak değil, kütle ve enerjinin neden olduğu uzay-zaman eğriliği olarak tanımladı. Bu devrimci kavram birçok olguyu öngördü:
+        </p>
+        
+        <ul>
+          <li>Büyük kütleli cisimler etrafında ışığın bükülmesi</li>
+          <li>Yerçekimsel dalgalar</li>
+          <li>Merkür'ün yörüngesindeki sapma</li>
+          <li>Yerçekimsel zaman genişlemesi</li>
+          <li>Kara deliklerin varlığı</li>
+        </ul>
+        
+        <p>
+          Teori, 1919'daki bir güneş tutulması sırasında dramatik bir şekilde doğrulandı. Astronomlar, uzak yıldızlardan gelen ışığın Güneş'in yerçekimi tarafından tam da Einstein'ın öngördüğü şekilde büküldüğünü gözlemlediler. Bu doğrulama Einstein'ı bir anda uluslararası üne kavuşturdu.
+        </p>
+        
+        <figure class="my-8">
+          <img 
+            src="https://images.pexels.com/photos/5210252/pexels-photo-5210252.jpeg" 
+            alt="Uzay-zaman eğriliği illüstrasyonu" 
+            class="rounded-lg w-full"
+          />
+          <figcaption class="text-center text-sm text-gray-500 dark:text-gray-400 mt-2">
+            Einstein'ın genel görelilik teorisine göre uzay-zaman eğriliği illüstrasyonu
+          </figcaption>
+        </figure>
+        
+        <h2>Sonraki Bilimsel Çalışmalar</h2>
+        <p>
+          Erken dönem çalışmaları en etkili olanlar olsa da, Einstein yaşamı boyunca fiziğe önemli katkılar yapmaya devam etti:
+        </p>
+        
+        <ul>
+          <li>
+            <strong>Bose-Einstein İstatistiği:</strong> Satyendra Nath Bose ile çalışarak, bozonların davranışını açıklayan istatistikleri geliştirdi ve Bose-Einstein yoğuşması adı verilen yeni bir madde halini öngördü.
+          </li>
+          <li>
+            <strong>Einstein-Podolsky-Rosen Paradoksu:</strong> Kuantum mekaniğinin eksikliğini sorgulayan bir düşünce deneyi ortaya koydu ve daha sonra kuantum bilgi biliminin gelişmesine yol açacak kavramları tanıttı.
+          </li>
+          <li>
+            <strong>Birleşik Alan Teorisi:</strong> Yaşamının son yıllarını tüm temel kuvvetleri tek bir çerçevede açıklayacak birleşik bir alan teorisi arayışına adadı.
+          </li>
+        </ul>
+        
+        <h2>Amerika'daki Yaşamı ve Sosyal Aktivizm</h2>
+        <p>
+          Yahudi bir bilim insanı olarak Einstein, Nazi partisinin yükselişiyle birlikte Almanya'da artan antisemitizmle karşı karşıya kaldı. 1933'te Amerika Birleşik Devletleri'ni ziyareti sırasında, yeni Nazi hükümetinin Yahudilerin üniversitelerde öğretmenlik de dahil olmak üzere resmi görevlerde bulunmasını yasaklayan yasalar çıkardığını öğrendi. Einstein Almanya'ya dönmemeye karar verdi ve Princeton'daki İleri Araştırmalar Enstitüsü'nde bir pozisyon kabul etti.
+        </p>
+        
+        <p>
+          Bilimsel çalışmalarının ötesinde Einstein, sivil haklar, pasifizm ve Siyonizm'in tutkulu bir savunucusuydu. Genel pasifist görüşlerine rağmen, 1939'da Başkan Franklin D. Roosevelt'e ünlü bir mektup imzaladı. Bu mektupta Almanya'nın nükleer silah geliştirme olasılığı konusunda uyarıda bulundu ve ABD'nin kendi nükleer araştırmalarına başlamasını önerdi. Bu mektup Manhattan Projesi'nin başlamasına yardımcı oldu, ancak Einstein'ın kendisi güvenlik izni olmadığı için atom bombası üzerinde çalışmadı.
+        </p>
+        
+        <p>
+          İkinci Dünya Savaşı'ndan sonra Einstein, nükleer silahsızlanma ve dünya hükümeti savunucusu oldu. 1952'de kendisine İsrail devlet başkanlığı teklif edildi ancak reddetti.
+        </p>
+        
+        <h2>Kişisel Yaşam</h2>
+        <p>
+          Einstein 1903'te fizik öğrencisi Mileva Marić ile evlendi. Çiftin Hans Albert ve Eduard adında iki oğlu ve Lieserl adında, akıbeti bilinmeyen bir kızı oldu. Marić'ten ayrıldıktan sonra 1919'da kuzeni Elsa Löwenthal ile evlendi.
+        </p>
+        
+        <p>
+          Dağınık saçları ve bıyığıyla karakteristik görünümüyle Einstein, dalgın profesör imgesinin simgesi haline geldi. Aynı zamanda espri anlayışı, hümanizmi ve müzik sevgisiyle de tanınırdı - yetenekli bir kemancıydı ve zor problemler üzerinde çalışırken zihnini berraklaştırmak için sıklıkla Mozart çalardı.
+        </p>
+        
+        <h2>Mirası ve Ölümü</h2>
+        <p>
+          Einstein 18 Nisan 1955'te Princeton, New Jersey'de bir abdominal aort anevrizması nedeniyle hayatını kaybetti. Ameliyatı reddederek şöyle dedi: "İstediğim zaman gitmek istiyorum. Hayatı yapay olarak uzatmak zevksizdir. Üzerime düşeni yaptım; gitme zamanı geldi. Bunu zarafetle yapacağım."
+        </p>
+        
+        <p>
+          Einstein'ın beyni bilimsel araştırma için korundu ve külleri bilinmeyen bir yere saçıldı. Mirası bilimsel başarılarının çok ötesine uzanır:
+        </p>
+        
+        <ul>
+          <li>Adı deha ve yaratıcılıkla eş anlamlı hale geldi</li>
+          <li>E=mc² denklemi belki de tarihin en ünlü denklemidir</li>
+          <li>Teorileri modern fizik ve kozmolojinin temelini oluşturur</li>
+          <li>Bilimsel makaleleri yeni araştırmalara ve keşiflere ilham vermeye devam ediyor</li>
+          <li>Barış ve sivil haklar savunuculuğu bugün hala aktivistlere ilham veriyor</li>
+        </ul>
+        
+        <p>
+          Belki de en önemlisi, Einstein fiziği düşünme şeklimizi devrimleştirdi. Mekanik, deterministik bir evren görüşünden, simetri, görelilik ve kuantum belirsizliğinin temel rolünü kabul eden bir anlayışa geçişi sağladı. Katkıları onu Isaac Newton ile birlikte tüm zamanların en büyük fizikçilerinden biri yapar.
+        </p>
+        
+        <div class="bg-secondary-50 dark:bg-secondary-900/30 p-6 rounded-lg my-8">
+          <h3 class="text-xl font-bold mb-2">Einstein'ın Başlıca Katkıları</h3>
+          <ul class="space-y-2">
+            <li><strong>Özel Görelilik Teorisi (1905):</strong> Fizik yasalarının tüm eylemsiz gözlemciler için aynı olduğunu ortaya koydu</li>
+            <li><strong>Kütle-Enerji Eşdeğerliği (1905):</strong> E=mc²</li>
+            <li><strong>Fotoelektrik Etki (1905):</strong> Işığın parçacıklardan (fotonlar) oluştuğunu gösterdi</li>
+            <li><strong>Brownian Hareketi (1905):</strong> Atomların varlığına dair kanıt sağladı</li>
+            <li><strong>Genel Görelilik Teorisi (1915):</strong> Yerçekimini uzay-zamanın eğriliği olarak tanımladı</li>
+            <li><strong>Bose-Einstein İstatistiği (1924):</strong> Belirli parçacıkların kuantum davranışını açıkladı</li>
+          </ul>
+        </div>
+        
+        <h2>Popüler Kültürde Einstein</h2>
+        <p>
+          Çok az bilim insanı Einstein kadar toplumsal hayal gücünü yakalamıştır. Karakteristik görünümü, devrimci fikirleri ve akılda kalıcı sözleriyle kültürel bir ikona dönüşmüştür. Sayısız kitap, film, oyun ve sanat eserinde konu edilmiştir. Dağınık saçlı dahi imgesi, bilimsel deha ve yaratıcı düşüncenin evrensel bir sembolü haline gelmiştir.
+        </p>
+        
+        <p>
+          Ölümünden 65 yıl sonra bile Einstein, entelektüel başarı ve yenilikçi düşüncenin sembolü olmaya devam ediyor. Hayatı ve çalışmaları sadece bilim insanlarına değil, hayal gücü, merak ve fikirlerin dünyayı değiştirme gücüne değer veren herkese ilham vermeye devam ediyor.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Related Articles -->
+    <section class="py-12 bg-gray-50 dark:bg-gray-800/50 mt-12">
+      <div class="container-wide">
+        <h2 class="text-2xl font-bold mb-8">Einstein Hakkında Makaleler</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ArticleCard
+            title="Einstein'ın Görelilik Teorisi: Fizikte Bir Devrim"
+            description="Albert Einstein'ın görelilik teorisinin uzay, zaman ve yerçekimi anlayışımızı nasıl temelden değiştirdiğini ve bu devrimci kavramın modern fiziği nasıl etkilediğini keşfedin."
+            image="https://images.pexels.com/photos/2098428/pexels-photo-2098428.jpeg"
+            slug="einsteins-theory-of-relativity"
+            date="15 Mart 2025"
+            readTime="15 dk okuma"
+            category="Görelilik"
+          />
+          
+          <ArticleCard
+            title="Kuantum Dolanıklık: Mesafede Esrarengiz Etki"
+            description="Einstein'ın 'mesafede esrarengiz etki' olarak adlandırdığı kuantum dolanıklığın gizemlerini çözün ve gerçeklik anlayışımıza nasıl meydan okuduğunu öğrenin."
+            image="https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg"
+            slug="quantum-entanglement"
+            date="28 Şubat 2025"
+            readTime="12 dk okuma"
+            category="Kuantum Fiziği"
+          />
+          
+          <ArticleCard
+            title="Fotoelektrik Etki: Einstein'ın Nobel Ödüllü Çalışması"
+            description="Einstein'ın Nobel Ödülü kazanmasını sağlayan fotoelektrik etkinin açıklamasının kuantum teorisinin kurulmasına nasıl yardımcı olduğunu ve ışık anlayışımızı nasıl devrimleştirdiğini keşfedin."
+            image="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg"
+            slug="photoelectric-effect"
+            date="10 Ocak 2025"
+            readTime="10 dk okuma"
+            category="Kuantum Fiziği"
+          />
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>

@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page Not Found - Quantum Insights">
+  <div class="min-h-[80vh] flex items-center justify-center">
+    <div class="text-center px-4">
+      <div class="relative inline-block">
+        <div class="relative">
+          <div class="text-9xl font-bold text-gray-200 dark:text-gray-800">404</div>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+            <div class="particles-container h-32 w-32 rounded-full">
+              <div id="particles"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <h1 class="mt-8 text-3xl md:text-4xl font-bold">Oops! Page not found</h1>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-lg mx-auto">
+        The page you're looking for seems to have been lost in the quantum foam. Perhaps it exists in another universe?
+      </p>
+      <div class="mt-8">
+        <a href="/" class="btn btn-primary">Return Home</a>
+        <a href="/blog" class="btn btn-secondary ml-4">Explore Articles</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  class Particle {
+    constructor(container) {
+      this.container = container;
+      this.element = document.createElement('div');
+      this.element.classList.add('particle');
+      
+      // Random properties
+      this.size = Math.random() * 5 + 2;
+      
+      // Constrain particles to a circle
+      const radius = 60;
+      const angle = Math.random() * Math.PI * 2;
+      const distance = Math.random() * radius;
+      
+      this.x = Math.cos(angle) * distance + radius;
+      this.y = Math.sin(angle) * distance + radius;
+      
+      // Random speed based on distance from center
+      const speed = (radius - distance) / radius * 1.5;
+      
+      this.speedX = Math.cos(angle) * speed * (Math.random() > 0.5 ? 1 : -1);
+      this.speedY = Math.sin(angle) * speed * (Math.random() > 0.5 ? 1 : -1);
+      
+      // Theming
+      const isDark = document.documentElement.classList.contains('dark');
+      const hue = Math.floor(Math.random() * 60) + 200; // blue range
+      const opacity = (Math.random() * 0.7 + 0.3).toFixed(2);
+      
+      // Set styles
+      Object.assign(this.element.style, {
+        width: `${this.size}px`,
+        height: `${this.size}px`,
+        left: `${this.x}px`,
+        top: `${this.y}px`,
+        opacity: opacity,
+        background: isDark ? 
+          `hsl(${hue}, 80%, 70%, ${opacity})` : 
+          `hsl(${hue}, 80%, 50%, ${opacity})`,
+        boxShadow: `0 0 ${this.size * 2}px hsla(${hue}, 80%, 70%, ${opacity * 0.5})`,
+        animation: `pulse ${Math.random() * 3 + 2}s infinite alternate, float ${Math.random() * 5 + 3}s infinite alternate`
+      });
+      
+      this.container.appendChild(this.element);
+    }
+    
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+      
+      // Boundary check - keep particles in a circle
+      const dx = this.x - 60; // center x
+      const dy = this.y - 60; // center y
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      
+      if (distance > 60) { // if outside circle
+        // Reflect the velocity
+        const nx = dx / distance;
+        const ny = dy / distance;
+        
+        const dotProduct = this.speedX * nx + this.speedY * ny;
+        
+        this.speedX = this.speedX - 2 * dotProduct * nx;
+        this.speedY = this.speedY - 2 * dotProduct * ny;
+        
+        // Move back inside circle
+        const angle = Math.atan2(dy, dx);
+        this.x = Math.cos(angle) * 60 + 60;
+        this.y = Math.sin(angle) * 60 + 60;
+      }
+      
+      // Update position
+      this.element.style.left = `${this.x}px`;
+      this.element.style.top = `${this.y}px`;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('particles');
+    if (!container) return;
+    
+    const particles = [];
+    const particleCount = 20;
+    
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle(container));
+    }
+    
+    function animate() {
+      particles.forEach(particle => particle.update());
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  });
+</script>
+
+<style>
+  @keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(180deg); }
+    100% { transform: translateY(0px) rotate(360deg); }
+  }
+
+  #particles {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+  }
+</style>

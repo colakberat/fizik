@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeaturedArticle from '../components/FeaturedArticle.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import ScientistCard from '../components/ScientistCard.astro';
+import ParticleBackground from '../components/ParticleBackground.astro';
+---
+
+<Layout>
+  <!-- Hero Section -->
+  <section class="relative py-20 md:py-32 overflow-hidden">
+    <ParticleBackground />
+    <div class="container-wide relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <span class="block text-gray-900 dark:text-gray-100">Fiziğin Dehasını</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-secondary-700 dark:from-primary-400 dark:to-secondary-400">Keşfedin</span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Tarihin efsanevi fizikçilerinin devrim niteliğindeki keşiflerini, zarif teorilerini ve derin içgörülerini keşfedin. Evrenin anlaşılmasını şekillendiren bilgeliği açığa çıkarın.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/blog" class="btn btn-primary">Makaleleri Keşfet</a>
+          <a href="/scientists" class="btn btn-secondary">Bilim İnsanlarıyla Tanış</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Article -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-800/50">
+    <div class="container-wide">
+      <h2 class="text-3xl font-bold mb-10 text-center">Öne Çıkan Makale</h2>
+      <FeaturedArticle
+        title="Einstein'ın Görelilik Teorisi: Fizikte Bir Devrim"
+        description="Albert Einstein'ın görelilik teorisinin uzay, zaman ve yerçekimi anlayışımızı nasıl temelden değiştirdiğini ve bu devrimci kavramın modern fiziği nasıl etkilediğini keşfedin."
+        author="Dr. Sarah Mitchell"
+        authorImg="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
+        image="https://images.pexels.com/photos/2098428/pexels-photo-2098428.jpeg"
+        slug="einsteins-theory-of-relativity"
+        date="15 Mart 2025"
+      />
+    </div>
+  </section>
+  
+  <!-- Latest Articles -->
+  <section class="py-16">
+    <div class="container-wide">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="text-3xl font-bold">Son Makaleler</h2>
+        <a href="/blog" class="text-primary-700 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-200 font-medium inline-flex items-center">
+          Tümünü Gör
+          <svg class="ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ArticleCard
+          title="Newton'un Hareket Yasaları Açıklandı"
+          description="Sir Isaac Newton tarafından ortaya konan klasik mekaniğin temel prensiplerini keşfedin ve bu yasaların günlük deneyimlerimizi nasıl yönettiğini öğrenin."
+          image="https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg"
+          slug="newtons-laws-of-motion"
+          date="10 Mart 2025"
+          readTime="8 dk okuma"
+          category="Klasik Mekanik"
+        />
+        
+        <ArticleCard
+          title="Marie Curie: Radyoaktivitenin Öncüsü"
+          description="Marie Curie'nin çığır açan araştırmalarını ve olağanüstü hayatını keşfedin. Atomik yapı anlayışımızı devrimleştiren radyoaktivite alanındaki keşifleri."
+          image="https://images.pexels.com/photos/8157617/pexels-photo-8157617.jpeg"
+          slug="marie-curie-radioactivity"
+          date="5 Mart 2025"
+          readTime="10 dk okuma"
+          category="Nükleer Fizik"
+        />
+        
+        <ArticleCard
+          title="Kuantum Dolanıklık: Mesafede Esrarengiz Etki"
+          description="Einstein'ın 'mesafede esrarengiz etki' olarak adlandırdığı kuantum dolanıklığın gizemlerini çözün ve gerçeklik anlayışımıza nasıl meydan okuduğunu öğrenin."
+          image="https://images.pexels.com/photos/3094799/pexels-photo-3094799.jpeg"
+          slug="quantum-entanglement"
+          date="28 Şubat 2025"
+          readTime="12 dk okuma"
+          category="Kuantum Fiziği"
+        />
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Scientists -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-800/50">
+    <div class="container-wide">
+      <div class="flex justify-between items-center mb-10">
+        <h2 class="text-3xl font-bold">Parlak Zihinler</h2>
+        <a href="/scientists" class="text-primary-700 dark:text-primary-300 hover:text-primary-800 dark:hover:text-primary-200 font-medium inline-flex items-center">
+          Tümünü Gör
+          <svg class="ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <ScientistCard
+          name="Albert Einstein"
+          image="https://images.pexels.com/photos/2773939/pexels-photo-2773939.jpeg"
+          years="1879-1955"
+          field="Teorik Fizik"
+          slug="albert-einstein"
+          contribution="Modern fiziğin iki temel direğinden biri olan görelilik teorisini geliştirdi."
+        />
+        
+        <ScientistCard
+          name="Marie Curie"
+          image="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
+          years="1867-1934"
+          field="Radyoaktivite"
+          slug="marie-curie"
+          contribution="Radyoaktivite alanının öncüsü, iki farklı bilim dalında Nobel Ödülü kazanan ilk kişi."
+        />
+        
+        <ScientistCard
+          name="Isaac Newton"
+          image="https://images.pexels.com/photos/60582/newton-s-cradle-balls-sphere-60582.jpeg"
+          years="1643-1727"
+          field="Klasik Mekanik"
+          slug="isaac-newton"
+          contribution="Klasik mekaniğin temellerini atan hareket ve evrensel çekim yasalarını formüle etti."
+        />
+        
+        <ScientistCard
+          name="Richard Feynman"
+          image="https://images.pexels.com/photos/714699/pexels-photo-714699.jpeg"
+          years="1918-1988"
+          field="Kuantum Fiziği"
+          slug="richard-feynman"
+          contribution="Kuantum elektrodinamiğin öncüsü ve parçacık etkileşimlerini görselleştirmek için Feynman diyagramlarını geliştirdi."
+        />
+      </div>
+    </div>
+  </section>
+  
+  <!-- Topics Section -->
+  <section class="py-16">
+    <div class="container-wide">
+      <h2 class="text-3xl font-bold mb-10 text-center">Konuları Keşfet</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="/topics/quantum-physics" class="group block">
+          <div class="relative h-48 rounded-lg overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/2876202/pexels-photo-2876202.jpeg" 
+              alt="Kuantum Fiziği" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+              <h3 class="text-xl text-white font-bold mb-2">Kuantum Fiziği</h3>
+              <p class="text-gray-300 text-sm">15 makale</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="/topics/relativity" class="group block">
+          <div class="relative h-48 rounded-lg overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/5210252/pexels-photo-5210252.jpeg" 
+              alt="Görelilik" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+              <h3 class="text-xl text-white font-bold mb-2">Görelilik</h3>
+              <p class="text-gray-300 text-sm">8 makale</p>
+            </div>
+          </div>
+        </a>
+        
+        <a href="/topics/astrophysics" class="group block">
+          <div class="relative h-48 rounded-lg overflow-hidden">
+            <img 
+              src="https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg" 
+              alt="Astrofizik" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+              <h3 class="text-xl text-white font-bold mb-2">Astrofizik</h3>
+              <p class="text-gray-300 text-sm">12 makale</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Newsletter -->
+  <section class="py-16 bg-gradient-to-r from-primary-700/90 to-secondary-700/90 text-white">
+    <div class="container-narrow text-center">
+      <h2 class="text-3xl font-bold mb-6">Haberdar Olun</h2>
+      <p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+        Bültenimize abone olun ve fizik dünyasından yeni makaleler, keşifler ve içgörülerden haberdar olun.
+      </p>
+      
+      <form class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+        <input 
+          type="email" 
+          placeholder="E-posta adresiniz" 
+          class="flex-grow px-4 py-3 rounded-md focus:outline-none text-gray-800"
+          required
+        />
+        <button 
+          type="submit" 
+          class="bg-accent-500 hover:bg-accent-600 text-gray-900 font-medium px-6 py-3 rounded-md transition-colors"
+        >
+          Abone Ol
+        </button>
+      </form>
+      <p class="text-sm opacity-75 mt-4">Gizliliğinize saygı duyuyoruz. İstediğiniz zaman abonelikten çıkabilirsiniz.</p>
+    </div>
+  </section>
+</Layout>

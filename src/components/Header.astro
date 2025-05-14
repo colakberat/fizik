@@ -1,0 +1,90 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import ParticleBackground from './ParticleBackground.astro';
+---
+
+<header class="sticky top-0 bg-white/80 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 z-50 transition-colors duration-300">
+  <div class="container-wide py-4 flex items-center justify-between">
+    <a href="/" class="text-2xl font-heading font-bold text-primary-700 dark:text-accent-500 flex items-center space-x-2">
+      <span class="relative">
+        <span class="absolute -inset-1 rounded-lg bg-accent-500/20 dark:bg-accent-500/10 blur-sm"></span>
+        <span class="relative">Kuantum</span>
+      </span>
+      <span>İçgörüler</span>
+    </a>
+    
+    <div class="flex items-center space-x-6">
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="/" class="nav-link">Ana Sayfa</a>
+        <a href="/blog" class="nav-link">Makaleler</a>
+        <a href="/scientists" class="nav-link">Bilim İnsanları</a>
+        <a href="/quiz" class="nav-link">Bilgi Yarışması</a>
+      </nav>
+      
+      <div class="flex space-x-4 items-center">
+        <a href="/search" aria-label="Arama">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600 dark:text-gray-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </a>
+        <ThemeToggle />
+        <button id="mobile-menu-toggle" class="md:hidden" aria-label="Menü">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="mobile-menu" class="fixed inset-0 md:hidden bg-white dark:bg-gray-900 z-50 hidden">
+    <div class="container-wide h-full flex flex-col">
+      <div class="flex justify-between items-center py-4">
+        <span class="text-2xl font-heading font-bold text-primary-700 dark:text-accent-500">Kuantum İçgörüler</span>
+        <button id="mobile-menu-close" aria-label="Menüyü kapat">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-6 py-12 text-xl">
+        <a href="/" class="mobile-nav-link">Ana Sayfa</a>
+        <a href="/blog" class="mobile-nav-link">Makaleler</a>
+        <a href="/scientists" class="mobile-nav-link">Bilim İnsanları</a>
+        <a href="/quiz" class="mobile-nav-link">Bilgi Yarışması</a>
+      </nav>
+      <div class="mt-auto pb-8 text-gray-500 dark:text-gray-400 text-sm">
+        <p>&copy; 2025 Kuantum İçgörüler</p>
+        <p>Tarihin en büyük zihinleriyle fiziği aydınlatıyoruz</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .nav-link {
+    @apply font-medium text-gray-600 dark:text-gray-300 hover:text-primary-700 dark:hover:text-primary-300 transition-colors;
+  }
+  
+  .mobile-nav-link {
+    @apply font-medium text-gray-800 dark:text-gray-200 hover:text-primary-700 dark:hover:text-primary-300 transition-colors;
+  }
+</style>
+
+<script>
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuToggle && mobileMenuClose && mobileMenu) {
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    });
+    
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    });
+  }
+</script>

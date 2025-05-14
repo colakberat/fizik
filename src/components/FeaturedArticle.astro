@@ -1,0 +1,54 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  author: string;
+  authorImg: string;
+  image: string;
+  slug: string;
+  date: string;
+}
+
+const { title, description, author, authorImg, image, slug, date } = Astro.props;
+---
+
+<div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-100 dark:border-gray-700 flex flex-col lg:flex-row">
+  <div class="lg:w-1/2 h-64 lg:h-auto relative overflow-hidden">
+    <img 
+      src={image} 
+      alt={title} 
+      class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+  
+  <div class="lg:w-1/2 p-8 flex flex-col">
+    <div class="flex-grow">
+      <div class="flex items-center space-x-2 mb-4">
+        <span class="px-3 py-1 text-xs font-medium bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full">Featured</span>
+        <time class="text-sm text-gray-500 dark:text-gray-400">{date}</time>
+      </div>
+      
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4">
+        <a href={`/blog/${slug}`} class="text-gray-900 dark:text-gray-100 hover:text-primary-700 dark:hover:text-primary-300">
+          {title}
+        </a>
+      </h2>
+      
+      <p class="text-gray-600 dark:text-gray-400 mb-6">
+        {description}
+      </p>
+    </div>
+    
+    <div class="flex items-center">
+      <img 
+        src={authorImg} 
+        alt={author} 
+        class="w-10 h-10 rounded-full mr-4 object-cover"
+      />
+      <div>
+        <p class="text-sm font-medium text-gray-900 dark:text-gray-100">{author}</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Physicist & Writer</p>
+      </div>
+    </div>
+  </div>
+</div>
